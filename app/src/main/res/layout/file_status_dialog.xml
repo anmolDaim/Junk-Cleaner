@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:background="@drawable/grey_optimize_btn"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/dialogFilename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="file Name"
+        android:textColor="@color/white"
+        android:fontFamily="@font/lato_bold"
+        android:padding="16dp"
+        android:textSize="@dimen/font_size_17"/>
+
+    <TextView
+        android:id="@+id/dialogFileDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Created date"
+        android:textColor="@color/white"
+        android:fontFamily="@font/lato_bold"
+        android:padding="16dp"
+        android:textSize="@dimen/font_size_14"/>
+    <TextView
+        android:id="@+id/dialogFileSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Size"
+        android:textColor="@color/white"
+        android:fontFamily="@font/lato_bold"
+        android:padding="16dp"
+        android:textSize="@dimen/font_size_14"/>
+    <TextView
+        android:id="@+id/dialogFilePath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Path"
+        android:textColor="@color/white"
+        android:fontFamily="@font/lato_bold"
+        android:padding="16dp"
+        android:textSize="@dimen/font_size_14"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancelDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="Cancel"
+            android:layout_margin="5dp"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/viewDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="View"
+            android:layout_margin="5dp"
+            android:textColor="@color/blue" />
+
+    </LinearLayout>
+
+</LinearLayout>

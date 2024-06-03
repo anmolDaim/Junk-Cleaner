@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/navigation_battery_saver"
+        android:icon="@drawable/battery_saver_nav_icon"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/navigation_tools"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/tools_nav_icon"/>
+    <item
+        android:id="@+id/navigation_profile"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/profile_nav_icon"/>
+</menu>

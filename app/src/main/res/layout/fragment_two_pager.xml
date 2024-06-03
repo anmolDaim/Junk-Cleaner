@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/widget_size_250"
+    android:background="@color/grey_bg"
+    tools:context=".Fragment.TwoPagerFragment">
+
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="68dp"
+        android:fontFamily="@font/lato_regular"
+        android:text="Battery Timeleft"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/font_size_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hoursTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="11"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_30"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="h"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_20"
+        app:layout_constraintBottom_toBottomOf="@+id/hoursTextView"
+        app:layout_constraintStart_toEndOf="@+id/hoursTextView" />
+
+    <TextView
+        android:id="@+id/minutesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="40"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_30"
+        app:layout_constraintBottom_toBottomOf="@+id/hoursTextView"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toTopOf="@+id/hoursTextView" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="m"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_20"
+        app:layout_constraintBottom_toBottomOf="@+id/minutesTextView"
+        app:layout_constraintStart_toEndOf="@+id/minutesTextView" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Optimize or apply\nmode to prolong"
+        android:textColor="@color/text_grey"
+        android:fontFamily="@font/lato_regular"
+        android:textSize="@dimen/font_size_16"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/hoursTextView" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="@dimen/widget_size_70"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/wave" />
+
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="@dimen/widget_size_70"
+        android:layout_height="@dimen/widget_size_20"
+        android:background="@drawable/rounded_corners"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/lottieAnimationView"
+        app:layout_constraintVertical_bias="0.794" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:rotation="270"
+        android:src="@drawable/battery_video_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView13"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/batter_consu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="68%"
+        android:textColor="@color/grey_btn"
+        android:fontFamily="@font/lato_bold"
+        android:textSize="@dimen/font_size_18"
+        app:layout_constraintBottom_toBottomOf="@+id/lottieAnimationView"
+        app:layout_constraintEnd_toEndOf="@+id/lottieAnimationView"
+        app:layout_constraintStart_toStartOf="@+id/lottieAnimationView"
+        app:layout_constraintTop_toTopOf="@+id/lottieAnimationView" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BATTERY"
+        android:textColor="@color/grey_btn"
+        android:fontFamily="@font/lato_bold"
+        android:textSize="@dimen/font_size_12"
+        app:layout_constraintEnd_toEndOf="@+id/batter_consu"
+        app:layout_constraintStart_toStartOf="@+id/batter_consu"
+        app:layout_constraintTop_toBottomOf="@+id/batter_consu" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/thunder_energy_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/hoursTextView"
+        app:layout_constraintEnd_toStartOf="@+id/hoursTextView"
+        app:layout_constraintTop_toTopOf="@+id/hoursTextView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/grey_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <ImageView
+            android:id="@+id/batteryUsageImage"
+            android:layout_width="@dimen/font_size_35"
+            android:layout_height="@dimen/font_size_35"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/app_diary" />
+
+        <TextView
+            android:id="@+id/batteruUsageName"
+            android:layout_width="@dimen/widget_size_90"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/lato_bold"
+            android:maxLines="1"
+            android:text="Application Name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_12"
+            app:layout_constraintStart_toEndOf="@+id/batteryUsageImage"
+            app:layout_constraintTop_toTopOf="@+id/batteryUsageImage" />
+
+
+        <ProgressBar
+            android:id="@+id/batteryUsageProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:layout_marginEnd="16dp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/batteryUsageImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/batteruUsageName" />
+
+        <TextView
+            android:id="@+id/batteryUsageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:text="time"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/font_size_14"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/batteruUsageName"
+            app:layout_constraintEnd_toEndOf="@+id/batteryUsageProgressBar"
+            app:layout_constraintTop_toTopOf="@+id/batteruUsageName" />
+
+        <TextView
+            android:id="@+id/batteryUsageGrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="High"
+            android:textColor="@color/green"
+            android:textSize="@dimen/font_size_12"
+            app:layout_constraintBottom_toBottomOf="@+id/batteruUsageName"
+            app:layout_constraintStart_toEndOf="@+id/batteruUsageName"
+            app:layout_constraintTop_toTopOf="@+id/batteruUsageName" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
