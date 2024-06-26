@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Regularly speed up phonre to improve"
+        android:text="Regularly speed up phone to improve"
         android:textColor="@color/text_grey"
         android:textSize="@dimen/font_size_11"
         app:layout_constraintStart_toStartOf="@+id/textView6"
@@ -47,11 +47,12 @@
         android:layout_width="@dimen/widget_size_200"
         android:layout_height="@dimen/widget_size_200"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView11"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/tvTextSize"
+        app:layout_constraintVertical_bias="0.488"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/cold_booster_anim" />
@@ -62,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/lato_bold"
-        android:text="Cold Shower"
+        android:text="Clean Junk Files"
         android:textColor="@color/blue"
         android:textSize="@dimen/font_size_14"
         app:layout_constraintBottom_toTopOf="@+id/textView16"
@@ -71,25 +72,67 @@
 
     <TextView
         android:id="@+id/textView16"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="24dp"
-        android:text="Phone CPU temperature high which may affect phone performance. One tab to cool now!"
+        android:text="Phone high storage which may affect phone performance. One tab to cool now!"
         android:textAlignment="center"
+        android:textColor="@color/text_grey"
         app:layout_constraintBottom_toTopOf="@+id/coldShowerBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/coldShowerBtn"
-        android:layout_width="@dimen/widget_size_120"
-        android:layout_height="@dimen/widget_size_35"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/optimize_btn"
-        android:text="Cold Shower"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/remove_btn"
+        android:text="Clean"
         android:textAllCaps="false"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView11"
-        app:layout_constraintStart_toStartOf="@+id/textView11" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView65"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Junk files Detected"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_14"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/tvTextSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/lato_bold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_25"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textView65"
+        app:layout_constraintTop_toTopOf="@+id/textView65" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:visibility="visible"
+        android:indeterminateTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/textView65"
+        app:layout_constraintStart_toEndOf="@+id/tvTextSize"
+        app:layout_constraintTop_toTopOf="@+id/textView65" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,20 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
-    <uses-permission android:name="android.permission.GET_META_DATA" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
-    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
-    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
     <uses-permission android:name="android.permission.BATTERY_STATS" />
-    <uses-permission android:name="android.permission.INTERNET" /> <!-- //<uses-permission android:name="android.permission.READ_PHONE_STATE"/> -->
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
     <uses-permission
         android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
 
     <application
         android:allowBackup="true"
@@ -29,25 +32,45 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JunkCleaner"
         tools:targetApi="31">
-        <receiver android:name=".Receiver.MobileDataReceiver"
-            android:exported="false" />
-        <receiver android:name=".Receiver.WifiReceiver"
-            android:exported="false" />
-        <receiver android:name=".Receiver.BluetoothReceiver"
-            android:exported="false" />
-        <receiver android:name=".Receiver.RotationReceiver"
-            android:exported="false" />
-        <receiver android:name=".Receiver.SilentReceiver"
-            android:exported="false" />
         <activity
-            android:name=".Activity.BatteryUsageActivity"
+            android:name=".Activity.ScreenCheckActivity"
             android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/app_id" />
+
         <activity
-            android:name=".Activity.NetworkTrafficActivity"
-            android:exported="false" />
+            android:name=".Activity.FileBigActivity"
+            android:exported="false"
+            android:theme="@style/Theme.JunkCleaner" />
         <activity
-            android:name=".Activity.BatteryInfoActivity"
-            android:exported="false" />
+            android:name=".Activity.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.JunkCleaner">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.AboutActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.JunkCleaner" />
+        <activity
+            android:name=".Activity.PrivacyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.JunkCleaner" />
+        <activity
+            android:name=".Activity.TermsAndConditionsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.JunkCleaner" />
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"
@@ -59,35 +82,50 @@
         </provider>
 
         <activity
-            android:name=".Activity.BigFileActivity"
-            android:exported="false" />
+            android:name=".Activity.BatteryUsageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.JunkCleaner" />
+        <activity
+            android:name=".Activity.NetworkTrafficActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.JunkCleaner" />
+        <activity
+            android:name=".Activity.BatteryInfoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.JunkCleaner" />
         <activity
             android:name=".Activity.DeviceStatusActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.JunkCleaner" />
         <activity
             android:name=".Activity.AppDiaryActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.JunkCleaner" />
         <activity
             android:name=".Activity.AppManagerActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.JunkCleaner" />
         <activity
             android:name=".Activity.GameAssistantActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.ColdShowerTempScannerActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.JunkCleaner" />
         <activity
             android:name=".Activity.ProcessManagerActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.JunkCleaner" />
         <activity
             android:name=".Activity.MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.JunkCleaner" />
     </application>
 
 </manifest>

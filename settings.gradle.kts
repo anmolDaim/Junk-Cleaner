@@ -15,6 +15,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "jun k cleaner"
+rootProject.name = "mob cleaner"
 include(":app")
  

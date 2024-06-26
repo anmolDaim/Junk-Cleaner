@@ -1,8 +1,10 @@
 <resources>
-    <string name="app_name">junk cleaner</string>
+    <string name="app_name">Mob Cleaner</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="notification_listener_service_label">Notification Listener Service</string>
+    <string name="app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="unit_id">ca-app-pub-3940256099942544/9214589741</string>
 
 
     <string-array name="dropdown_items1">
@@ -13,23 +15,5 @@
         <item>Document</item>
         <item>Archives</item>
         <item>Apk</item>
-    </string-array>
-    <string-array name="dropdown_items2">
-        <item>Size</item>
-        <item>Larger than</item>
-        <item>10MB</item>
-        <item>50MB</item>
-        <item>100MB</item>
-        <item>500MB</item>
-        <item>1GB</item>
-    </string-array>
-    <string-array name="dropdown_items3">
-        <item>Time</item>
-        <item>Older than</item>
-        <item>1 week</item>
-        <item>1 month</item>
-        <item>3 month</item>
-        <item>6 month</item>
-        <item>1 year</item>
     </string-array>
 </resources>

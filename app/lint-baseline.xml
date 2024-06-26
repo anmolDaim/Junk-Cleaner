@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.2.2" type="baseline" client="gradle" dependencies="false" name="AGP (8.2.2)" variant="fatal" version="8.2.2">
+
+    <issue
+        id="UnknownId"
+        message="The id &quot;`textView2`&quot; is not defined anywhere. Did you mean one of {textView3, textView4, textView5, textView6, textView7, textView8, textView9} ?"
+        errorLine1="        app:layout_constraintTop_toBottomOf=&quot;@+id/textView2&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/permission_layout.xml"
+            line="16"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="Instantiatable"
+        message="This class should provide a default constructor (a public constructor with no arguments) (`com.mobcleaner.app.Receiver.MobileDataReceiver`)"
+        errorLine1="            android:name=&quot;.Receiver.MobileDataReceiver&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="91"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="Instantiatable"
+        message="This class should provide a default constructor (a public constructor with no arguments) (`com.mobcleaner.app.Receiver.WifiReceiver`)"
+        errorLine1="            android:name=&quot;.Receiver.WifiReceiver&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="98"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="Instantiatable"
+        message="This class should provide a default constructor (a public constructor with no arguments) (`com.mobcleaner.app.Receiver.BluetoothReceiver`)"
+        errorLine1="            android:name=&quot;.Receiver.BluetoothReceiver&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="105"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="Instantiatable"
+        message="This class should provide a default constructor (a public constructor with no arguments) (`com.mobcleaner.app.Receiver.RotationReceiver`)"
+        errorLine1="            android:name=&quot;.Receiver.RotationReceiver&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="112"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="Instantiatable"
+        message="This class should provide a default constructor (a public constructor with no arguments) (`com.mobcleaner.app.Receiver.SilentReceiver`)"
+        errorLine1="            android:name=&quot;.Receiver.SilentReceiver&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="119"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="NotSibling"
+        message="`@+id/appBarLayout` is not a sibling in the same `ConstraintLayout`"
+        errorLine1="                app:layout_constraintTop_toBottomOf=&quot;@+id/appBarLayout&quot;>"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_battery_info.xml"
+            line="92"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="NotSibling"
+        message="`@+id/mobileData` is not a sibling in the same `ConstraintLayout`"
+        errorLine1="                app:layout_constraintTop_toBottomOf=&quot;@+id/mobileData&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_network_traffic.xml"
+            line="142"
+            column="17"/>
+    </issue>
+
+</issues>

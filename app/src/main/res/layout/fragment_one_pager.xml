@@ -25,7 +25,7 @@
         android:layout_marginTop="48dp"
         android:layout_marginEnd="80dp"
         android:fontFamily="@font/lato_bold"
-        android:text="63%"
+
         android:textColor="@color/white"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/lato_bold"
-        android:text="63%"
+
         android:textColor="@color/white"
         android:textSize="16dp"
         app:layout_constraintStart_toStartOf="@+id/batteryPercentageTextView"
@@ -98,7 +98,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/lato_bold"
-        android:text="63%"
         android:textColor="@color/white"
         android:textSize="16dp"
         app:layout_constraintStart_toStartOf="@+id/memoryUsageTextView"
@@ -124,11 +123,13 @@
         android:background="@drawable/optimize_btn"
         android:text="junk clean"
         android:textAllCaps="true"
-        android:textColor="@color/white"
+        android:textColor="#FFFFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/textView7"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view4" />
+        app:layout_constraintTop_toBottomOf="@+id/view4"
+        app:layout_constraintVertical_bias="0.576" />
 
     <ProgressBar
         android:id="@+id/batteryChargeProgressBar"
@@ -138,6 +139,7 @@
         android:indeterminate="false"
         android:max="100"
         android:progress="65"
+        android:background="@drawable/circle_shape_blue"
         android:progressDrawable="@drawable/circular_progress"
         app:layout_constraintBottom_toBottomOf="@+id/memoryUsedProgressBar"
         app:layout_constraintEnd_toEndOf="@+id/junkCleanBtn"
@@ -152,6 +154,7 @@
         android:indeterminate="false"
         android:max="100"
         android:progress="65"
+        android:background="@drawable/circle_shape_green"
         android:progressDrawable="@drawable/circle_progress_green"
         app:layout_constraintBottom_toBottomOf="@+id/runningAppProgressBar"
         app:layout_constraintEnd_toEndOf="@+id/junkCleanBtn"
@@ -167,9 +170,11 @@
         android:indeterminate="false"
         android:max="100"
         android:progress="65"
+        android:background="@drawable/circle_shape"
         android:progressDrawable="@drawable/circle_progress_orange"
         app:layout_constraintBottom_toTopOf="@+id/junkCleanBtn"
         app:layout_constraintEnd_toEndOf="@+id/junkCleanBtn"
         app:layout_constraintStart_toStartOf="@+id/junkCleanBtn"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#D3D3D3" /> <!-- Light grey color for the background -->
+        </shape>
+    </item>
+    <!-- Progress layer -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape android:shape="rectangle">
+                <solid android:color="#2196F3" /> <!-- Yellow color for the progress -->
+            </shape>
+        </clip>
+    </item>
+</selector>

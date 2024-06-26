@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/deviceStatus"
+            android:title="Device Status"
+            android:icon="@drawable/status_device"/>
+        <item
+            android:id="@+id/gameBox"
+            android:title="Game Box"
+            android:icon="@drawable/game_box"/>
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/settings_profile"
+            android:title="App Settings" />
+        <item
+            android:id="@+id/mailUs"
+            android:title="Mail Us"
+            android:icon="@drawable/email_profile"/>
+        <item
+            android:id="@+id/iLikeCleaner"
+            android:title="I like Junk Cleaner"
+            android:icon="@drawable/like_icon"/>
+    </group>
+</menu>

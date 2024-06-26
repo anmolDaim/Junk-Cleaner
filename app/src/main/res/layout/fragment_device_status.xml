@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Fragment.DeviceStatusFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="Phone Model"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lottieAnimationView2" />
+
+        <TextView
+            android:id="@+id/phoneModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="TextView"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/font_size_14"
+            app:layout_constraintStart_toStartOf="@+id/textView23"
+            app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="System OS Version"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_14"
+            app:layout_constraintStart_toStartOf="@+id/phoneModel"
+            app:layout_constraintTop_toBottomOf="@+id/phoneModel" />
+
+        <TextView
+            android:id="@+id/osVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="TextView"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/font_size_14"
+            app:layout_constraintStart_toStartOf="@+id/textView31"
+            app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView2"
+            android:layout_width="@dimen/widget_size_150"
+            android:layout_height="@dimen/widget_size_150"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/device_status" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/grey_bg"
+                android:paddingBottom="@dimen/widget_size_16">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    app:layout_constraintStart_toStartOf="@+id/textView33"
+                    app:layout_constraintTop_toBottomOf="@+id/textView33"
+                    android:layout_width="@dimen/widget_size_25"
+                    android:layout_height="@dimen/widget_size_25"
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/cpu" />
+
+                <TextView
+                    android:id="@+id/textView33"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="State Info"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_14" />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    app:layout_constraintStart_toStartOf="@+id/imageView5"
+                    app:layout_constraintTop_toBottomOf="@+id/cpuProgressBar"
+                    app:srcCompat="@drawable/ram"
+                    android:layout_width="@dimen/widget_size_25"
+                    android:layout_height="@dimen/widget_size_25"
+                    android:layout_marginTop="16dp" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    app:layout_constraintStart_toStartOf="@+id/imageView6"
+                    app:layout_constraintTop_toBottomOf="@+id/ramProgressBar"
+                    app:srcCompat="@drawable/sd_card"
+                    android:layout_width="@dimen/widget_size_25"
+                    android:layout_height="@dimen/widget_size_25"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/textView34"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView5"
+                    app:layout_constraintStart_toEndOf="@+id/imageView5"
+                    app:layout_constraintTop_toTopOf="@+id/imageView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="CPU"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_14" />
+
+                <ProgressBar
+                    android:id="@+id/cpuProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                    app:layout_constraintStart_toStartOf="@+id/textView34"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView5"
+                    android:layout_width="@dimen/widget_size_200"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:minWidth="200dp"
+                    android:minHeight="50dp"
+                    android:progress="1" />
+
+                <TextView
+                    android:id="@+id/textView35"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView6"
+                    app:layout_constraintStart_toEndOf="@+id/imageView6"
+                    app:layout_constraintTop_toTopOf="@+id/imageView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="RAM"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_14" />
+
+                <ProgressBar
+                    android:id="@+id/ramProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+                    app:layout_constraintStart_toStartOf="@+id/textView35"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView6"
+                    android:layout_width="@dimen/widget_size_200"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:minWidth="200dp"
+                    android:minHeight="50dp"
+                    android:progress="1" />
+
+                <TextView
+                    android:id="@+id/textView36"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView7"
+                    app:layout_constraintStart_toEndOf="@+id/imageView7"
+                    app:layout_constraintTop_toTopOf="@+id/imageView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Storage"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_14" />
+
+                <ProgressBar
+
+                    android:id="@+id/storageProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                    app:layout_constraintStart_toStartOf="@+id/textView36"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView7"
+                    android:layout_width="@dimen/widget_size_200"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:minWidth="200dp"
+                    android:minHeight="50dp"
+                    android:progress="1" />
+
+                <TextView
+                    android:id="@+id/cpuInfo"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView34"
+                    app:layout_constraintStart_toEndOf="@+id/textView34"
+                    app:layout_constraintTop_toTopOf="@+id/textView34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="TextView"
+                    android:textColor="@color/text_grey" />
+
+                <TextView
+                    android:id="@+id/ramInfo"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView35"
+                    app:layout_constraintStart_toEndOf="@+id/textView35"
+                    app:layout_constraintTop_toTopOf="@+id/textView35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="TextView"
+                    android:textColor="@color/text_grey" />
+
+                <TextView
+                    android:id="@+id/storageInfo"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView36"
+                    app:layout_constraintStart_toEndOf="@+id/textView36"
+                    app:layout_constraintTop_toTopOf="@+id/textView36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="TextView"
+                    android:textColor="@color/text_grey" />
+
+                <TextView
+                    android:id="@+id/storageCleaner"
+                    app:layout_constraintBottom_toTopOf="@+id/storageProgressBar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ramProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Clean"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/font_size_16" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/grey_bg"
+                android:paddingBottom="@dimen/widget_size_16">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    app:layout_constraintStart_toStartOf="@+id/textView40"
+                    app:layout_constraintTop_toBottomOf="@+id/textView40"
+                    android:layout_width="@dimen/widget_size_35"
+                    android:layout_height="@dimen/widget_size_35"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/storage" />
+
+                <TextView
+                    android:id="@+id/textView40"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Storage"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/textView41"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+                    app:layout_constraintStart_toEndOf="@+id/imageView8"
+                    app:layout_constraintTop_toTopOf="@+id/imageView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="ROM Space"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/textView42"
+                    app:layout_constraintStart_toStartOf="@+id/textView41"
+                    app:layout_constraintTop_toBottomOf="@+id/textView41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="SD card space"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/romSpace"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView41"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:textColor="@color/text_grey"
+                    android:fontFamily="@font/lato_bold"
+                     />
+
+                <TextView
+                    android:id="@+id/sdCardSpace"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView42"
+                    app:layout_constraintEnd_toEndOf="@+id/romSpace"
+                    app:layout_constraintTop_toTopOf="@+id/textView42"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_grey"
+                    android:fontFamily="@font/lato_bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/storageCleaner2"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/optimize_btn"
+                    android:text="Clean"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@+id/sdCardSpace"
+                    app:layout_constraintTop_toBottomOf="@+id/sdCardSpace" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/grey_bg"
+                android:paddingBottom="@dimen/widget_size_16">
+
+                <ImageView
+                    android:id="@+id/imageView81"
+                    app:layout_constraintStart_toStartOf="@+id/textView401"
+                    app:layout_constraintTop_toBottomOf="@+id/textView401"
+                    android:layout_width="@dimen/widget_size_35"
+                    android:layout_height="@dimen/widget_size_35"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/screen" />
+
+                <TextView
+                    android:id="@+id/textView401"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Screen"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/textView414"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView81"
+                    app:layout_constraintStart_toEndOf="@+id/imageView81"
+                    app:layout_constraintTop_toTopOf="@+id/imageView81"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Screen Resolution"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/textView422"
+                    app:layout_constraintStart_toStartOf="@+id/textView414"
+                    app:layout_constraintTop_toBottomOf="@+id/textView414"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Screen Density"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/screenResolution"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:textColor="@color/text_grey"
+                    android:fontFamily="@font/lato_bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView414"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView414" />
+
+                <TextView
+                    android:id="@+id/screenDensity"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView422"
+                    app:layout_constraintEnd_toEndOf="@+id/screenResolution"
+                    app:layout_constraintTop_toTopOf="@+id/textView422"
+                    android:textColor="@color/text_grey"
+                    android:fontFamily="@font/lato_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textView27"
+                    app:layout_constraintStart_toStartOf="@+id/textView422"
+                    app:layout_constraintTop_toBottomOf="@+id/textView422"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Screen Multiple-\ntouch Support"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/multipleScreen"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView27"
+                    app:layout_constraintEnd_toEndOf="@+id/screenDensity"
+                    app:layout_constraintTop_toTopOf="@+id/textView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_grey"
+                    android:fontFamily="@font/lato_bold"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/checkScreenBtn"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/optimize_btn"
+                    android:text="Check"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/multipleScreen"
+                    app:layout_constraintTop_toBottomOf="@+id/textView27" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

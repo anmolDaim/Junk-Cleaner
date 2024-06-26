@@ -63,9 +63,12 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/appUsageBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
@@ -80,13 +83,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/widget_size_100"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:backgroundTint="@color/batteryInfo"
                 app:cardCornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+                app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -414,38 +416,297 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
-            <com.jjoe64.graphview.GraphView
-                android:id="@+id/batteryLevelChart"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView4" />
 
-            <com.jjoe64.graphview.GraphView
-                android:id="@+id/batteryTemperatureChart"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView9"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/grey_bg"
+                app:cardCornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/batteryLevelChart" />
+                app:layout_constraintTop_toBottomOf="@+id/cardView4">
 
-            <com.jjoe64.graphview.GraphView
-                android:id="@+id/batteryVoltageChart"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/graph_gradient_blue"
+                    >
+
+                    <TextView
+                        android:id="@+id/textView70"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Battery Level"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_16"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout13"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView70">
+
+
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:id="@+id/batteryLevelChart"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_marginBottom="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView10"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginTop="24dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/grey_bg"
+                app:cardCornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/batteryTemperatureChart" />
+                app:layout_constraintTop_toBottomOf="@+id/cardView9">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/battery_gradient_red">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        mpandroidchart:layout_constraintEnd_toEndOf="parent"
+                        mpandroidchart:layout_constraintStart_toStartOf="parent"
+                        mpandroidchart:layout_constraintTop_toBottomOf="@+id/realTimeTemp">
+
+
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:id="@+id/batteryTemperatureChart"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            mpandroidchart:layout_constraintBottom_toBottomOf="parent"
+                            mpandroidchart:layout_constraintEnd_toEndOf="parent"
+                            mpandroidchart:layout_constraintStart_toStartOf="parent"
+                            mpandroidchart:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <TextView
+                        android:id="@+id/textView71"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Battery Temperature"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_16"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView72"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Real_time Temperature"
+                        android:textColor="@color/text_grey"
+                        android:textSize="@dimen/font_size_14"
+                        mpandroidchart:layout_constraintStart_toStartOf="@+id/textView71"
+                        mpandroidchart:layout_constraintTop_toBottomOf="@+id/textView71" />
+
+                    <TextView
+                        android:id="@+id/realTimeTemp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="0 C"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_19"
+                        mpandroidchart:layout_constraintEnd_toEndOf="@+id/textView72"
+                        mpandroidchart:layout_constraintStart_toStartOf="@+id/textView72"
+                        mpandroidchart:layout_constraintTop_toBottomOf="@+id/textView72" />
+
+                    <TextView
+                        android:id="@+id/textView74"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Average Temperature"
+                        android:textColor="@color/text_grey"
+                        android:textSize="@dimen/font_size_14"
+                        mpandroidchart:layout_constraintEnd_toEndOf="parent"
+                        mpandroidchart:layout_constraintStart_toEndOf="@+id/textView72"
+                        mpandroidchart:layout_constraintTop_toTopOf="@+id/textView72" />
+
+                    <TextView
+                        android:id="@+id/averageTemp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="0 C"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_19"
+                        mpandroidchart:layout_constraintBottom_toBottomOf="@+id/realTimeTemp"
+                        mpandroidchart:layout_constraintEnd_toEndOf="@+id/textView74"
+                        mpandroidchart:layout_constraintStart_toStartOf="@+id/textView74"
+                        mpandroidchart:layout_constraintTop_toTopOf="@+id/realTimeTemp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="10dp"
+                android:backgroundTint="@color/grey_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView10">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/battery_gradient_green">
+
+                    <TextView
+                        android:id="@+id/averageCurrent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="0 C"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_19"
+                        mpandroidchart:layout_constraintBottom_toBottomOf="@+id/realTimeVoltage"
+                        mpandroidchart:layout_constraintEnd_toEndOf="@+id/textView80"
+                        mpandroidchart:layout_constraintStart_toStartOf="@+id/textView80"
+                        mpandroidchart:layout_constraintTop_toTopOf="@+id/realTimeVoltage" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+
+                        android:id="@+id/constraintLayout14"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        mpandroidchart:layout_constraintBottom_toBottomOf="parent"
+                        mpandroidchart:layout_constraintEnd_toEndOf="parent"
+                        mpandroidchart:layout_constraintStart_toStartOf="parent"
+                        mpandroidchart:layout_constraintTop_toBottomOf="@+id/realTimeVoltage">
+
+
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:id="@+id/batteryVoltageChart"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            mpandroidchart:layout_constraintBottom_toBottomOf="parent"
+                            mpandroidchart:layout_constraintEnd_toEndOf="parent"
+                            mpandroidchart:layout_constraintStart_toStartOf="parent"
+                            mpandroidchart:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <TextView
+                        android:id="@+id/textView77"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Real_time Voltage"
+                        android:textColor="@color/text_grey"
+                        android:textSize="@dimen/font_size_14"
+                        app:layout_constraintStart_toStartOf="@+id/textView73"
+                        app:layout_constraintTop_toBottomOf="@+id/textView73" />
+
+                    <TextView
+                        android:id="@+id/realTimeVoltage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="0 C"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_19"
+                        mpandroidchart:layout_constraintEnd_toEndOf="@+id/textView77"
+                        mpandroidchart:layout_constraintStart_toStartOf="@+id/textView77"
+                        mpandroidchart:layout_constraintTop_toBottomOf="@+id/textView77" />
+
+                    <TextView
+                        android:id="@+id/textView73"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Battery Voltage"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_16"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView80"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Average Current"
+                        android:textColor="@color/text_grey"
+                        android:textSize="@dimen/font_size_14"
+                        mpandroidchart:layout_constraintBottom_toBottomOf="@+id/textView77"
+                        mpandroidchart:layout_constraintEnd_toEndOf="parent"
+                        mpandroidchart:layout_constraintStart_toEndOf="@+id/textView77"
+                        mpandroidchart:layout_constraintTop_toTopOf="@+id/textView77" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appUsageBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/optimize_btn"
+        android:text="Recnet App Usage"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

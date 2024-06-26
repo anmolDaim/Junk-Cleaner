@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "761650740711",
+    "firebase_url": "https://news-application-807b2-default-rtdb.firebaseio.com",
+    "project_id": "news-application-807b2",
+    "storage_bucket": "news-application-807b2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761650740711:android:c3d96566cd3d12e9acd142",
+        "android_client_info": {
+          "package_name": "com.example.newsapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2ruieaupRtBZYoT_X7ZbvaMEycEqYWxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761650740711:android:96293c4ac7d8b1d5acd142",
+        "android_client_info": {
+          "package_name": "com.mobcleaner.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2ruieaupRtBZYoT_X7ZbvaMEycEqYWxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761650740711:android:a0af3da0dcfd9f94acd142",
+        "android_client_info": {
+          "package_name": "com.mobnews.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2ruieaupRtBZYoT_X7ZbvaMEycEqYWxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

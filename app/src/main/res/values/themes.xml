@@ -1,8 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.JunkCleaner" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@android:color/black</item>
-
+        <item name="colorPrimary">@android:color/black</item> <!-- Primary color set to black -->
     </style>
 
     <style name="Theme.JunkCleaner" parent="Base.Theme.JunkCleaner" />
@@ -11,9 +10,11 @@
         <item name="android:background">@android:color/transparent</item>
         <item name="android:theme">@style/NoRippleTheme</item>
     </style>
+
     <style name="NoRippleTheme">
         <item name="android:colorControlHighlight">@android:color/transparent</item>
     </style>
+
     <style name="CustomAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
         <!-- Customize AlertDialog attributes -->
         <item name="android:windowBackground">@drawable/dialog_background</item>
@@ -30,11 +31,15 @@
         <!-- Customize AlertDialog attributes -->
         <item name="android:windowBackground">@drawable/permission_dialog_bg</item>
         <item name="android:background">@drawable/permission_dialog_bg</item>
-<!--        <item name="android:buttonBarPositiveButtonStyle">@style/AlertDialogButtonStyle</item>-->
-<!--        <item name="android:buttonBarNegativeButtonStyle">@style/AlertDialogButtonStyle</item>-->
     </style>
-<!--    <style name="AlertDialogButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">-->
-<!--        <item name="android:textColor">@android:color/black</item>-->
-<!--    </style>-->
 
+    <style name="TransparentDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+<!--    <style name="NavigationViewTheme">-->
+<!--        <item name="android:textColor">@color/white</item>-->
+<!--    </style>-->
 </resources>

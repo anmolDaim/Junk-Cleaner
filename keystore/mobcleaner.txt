@@ -1,0 +1,25 @@
+Mob Cleaner app
+
+app.release.apk  C:\Users\Anmol Daim\AndroidStudioProjects\junkcleaner\app\release
+release password: anmol123
+jks file location :C:\Users\Anmol Daim\AndroidStudioProjects\junkcleaner\keystore\mobcleaner.jks
+key alias: key0
+
+PS C:\Program Files\Android\Android Studio\jbr\bin> ./keytool -list -v -keystore "C:\Users\Anmol Daim\AndroidStudioProjects\junkcleaner\keystore\mobcleaner.jks" -alias key0 -storepass anmol123 -keypass anmol123
+Alias name: key0
+Creation date: 26-Jun-2024
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: C=91, ST=Haryana, L=Panipat, O=MindGeeks, OU=Developer, CN=Anmol Daim
+Issuer: C=91, ST=Haryana, L=Panipat, O=MindGeeks, OU=Developer, CN=Anmol Daim
+Serial number: 1
+Valid from: Wed Jun 26 13:34:07 IST 2024 until: Sun Jun 20 13:34:07 IST 2049
+Certificate fingerprints:
+         SHA1: 19:F1:26:55:43:54:06:14:39:77:03:02:44:5B:83:6A:D5:1C:65:26
+         SHA256: 01:30:8F:50:8E:59:5D:62:42:48:6B:4B:72:BB:C0:99:57:3B:EA:49:EE:9D:42:40:82:09:61:41:57:CC:74:EF
+Signature algorithm name: SHA256withRSA
+Subject Public Key Algorithm: 2048-bit RSA key
+Version: 1
+PS C:\Program Files\Android\Android Studio\jbr\bin>
+

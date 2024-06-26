@@ -19,3 +19,25 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+
+-keep class com.mobcleaner.app.Activity.*{ *; }
+-keep class com.mobcleaner.app.Fragment.* { *; }
+-keep class com.mobcleaner.app.Adapter.* { *; }
+-keep class com.mobcleaner.app.DataClass.* { *; }
+-keep class com.mobcleaner.app.transition.* { *; }
+
+#PhilJay:MPAndroidChart
+-keep class com.github.mikephil.charting.** { *; }
+
+
+#admob
+-keep class com.google.ads.mediation.admob.AdMobAdapter {
+    *;
+}
+
+-keep class com.google.ads.mediation.AdUrlAdapter {
+    *;
+}
+
+
