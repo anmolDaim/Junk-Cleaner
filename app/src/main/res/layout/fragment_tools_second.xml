@@ -9,88 +9,179 @@
     tools:context=".Fragment.ToolsSecondFragment">
 
 
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="@dimen/widget_size_20"
+        android:layout_height="@dimen/widget_size_20"
+        android:src="@drawable/speed_test"
+        app:layout_constraintBottom_toBottomOf="@+id/textView38"
+        app:layout_constraintEnd_toStartOf="@+id/textView38"
+        app:layout_constraintTop_toTopOf="@+id/textView38" />
+
     <me.ibrahimsn.lib.Speedometer
         android:id="@+id/speedometer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
+        android:visibility="gone"
         app:borderColor="@color/white"
         app:borderSize="8dp"
-        app:fillColor="#d83a78"
+        app:fillColor="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.218"
         app:maxSpeed="100"
         app:metricText="Mbps"
-        app:textColor="#f5f5f5" />
-
+        app:textColor="@color/white" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/startTestButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/widget_size_150"
+        android:layout_height="150dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/optimize_btn"
-        android:text="Start Test"
-        android:textColor="@color/white"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/lato_bold"
+        android:text="GO"
+        android:textColor="#fff"
+        android:textSize="@dimen/font_size_35"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/downloadSpeedTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Download Speed: "
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toStartOf="@+id/uploadSpeedTextView"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Download Speed"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/font_size_14"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/view16"
         app:layout_constraintTop_toBottomOf="@+id/speedometer" />
 
     <TextView
         android:id="@+id/uploadSpeedTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Upload Speed: "
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/downloadSpeedTextView"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Upload Speed"
+        android:textColor="@color/yellow"
+        android:textSize="@dimen/font_size_14"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/imageView13"
         app:layout_constraintTop_toBottomOf="@+id/speedometer" />
 
-
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/downlad"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/startTestButton"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/lato_bold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_18"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/downloadSpeedTextView"
+        app:layout_constraintTop_toBottomOf="@+id/downloadSpeedTextView" />
+
+    <TextView
+        android:id="@+id/upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/lato_bold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_18"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/uploadSpeedTextView"
+        app:layout_constraintTop_toBottomOf="@+id/uploadSpeedTextView" />
+
+    <View
+        android:id="@+id/view16"
+        android:layout_width="2dp"
+        android:layout_height="100dp"
+        android:background="@color/border"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/downlad"
+        app:layout_constraintEnd_toEndOf="@+id/speedometer"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/speedometer"
+        app:layout_constraintTop_toBottomOf="@+id/speedometer"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="@dimen/widget_size_30"
+        android:layout_height="@dimen/widget_size_30"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/download_image"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/downlad"
+        app:layout_constraintEnd_toStartOf="@+id/downloadSpeedTextView"
+        app:layout_constraintTop_toTopOf="@+id/downloadSpeedTextView" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="@dimen/widget_size_30"
+        android:layout_height="@dimen/widget_size_30"
+        android:layout_marginStart="24dp"
+        android:src="@drawable/upload_image"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/upload"
+        app:layout_constraintStart_toEndOf="@+id/view16"
+        app:layout_constraintTop_toTopOf="@+id/uploadSpeedTextView" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottliWaves"
+        android:layout_width="419dp"
+        android:layout_height="315dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/downloadSpeedTextView">
+        app:lottie_autoPlay="true"
+        android:visibility="gone"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/waves_network" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottlieBtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/circle_bg" />
 
-
-            <com.github.mikephil.charting.charts.LineChart
-                android:id="@+id/lineChart"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginTop="16dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.core.widget.NestedScrollView>
-
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="SPEED TEST"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/font_size_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

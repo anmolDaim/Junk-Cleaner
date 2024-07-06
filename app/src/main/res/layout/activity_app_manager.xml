@@ -74,11 +74,10 @@
         android:id="@+id/backup_btn"
         android:layout_width="@dimen/widget_size_120"
         android:layout_height="@dimen/widget_size_35"
-        android:layout_marginTop="24dp"
         android:layout_marginBottom="24dp"
         android:background="@drawable/remove_btn"
         android:text="Backup"
-        android:textColor="@color/white"
+        android:textColor="#FFFFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/uninstallButton"
         app:layout_constraintHorizontal_bias="0.5"
@@ -90,7 +89,7 @@
         android:layout_height="@dimen/widget_size_35"
         android:text="Uninstall"
         android:background="@drawable/remove_btn"
-        android:textColor="@color/white"
+        android:textColor="#FFFFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/backup_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -116,11 +115,23 @@
         android:layout_width="@dimen/widget_size_40"
         android:layout_height="@dimen/widget_size_40"
         android:indeterminateTint="@color/white"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/appAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="@+id/appManagerItemRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/appManagerCategoryRecyclerView"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/app_anim" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,16 +5,11 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
     <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
     <uses-permission android:name="android.permission.BATTERY_STATS" />
-    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
-    <uses-permission
-        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
-        tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
     <uses-permission
         android:name="android.permission.QUERY_ALL_PACKAGES"
@@ -31,7 +26,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.JunkCleaner"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        tools:replace="android:allowBackup">
+
+        <property
+            android:name="android.adservices.AD_SERVICES_CONFIG"
+            android:resource="@xml/gma_ad_services_config"
+            tools:replace="android:resource"/>
+
         <activity
             android:name=".Activity.ScreenCheckActivity"
             android:exported="false" />
@@ -39,6 +41,29 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/app_id" />
+
+        <meta-data
+            android:name="com.trustlook.ApiKey"
+            android:value="3f8dceb476d4ab2ad2f96ed224984aad077110c68e8e4711939bba43" />
+
+        <meta-data
+            android:name="com.trustlook.cleansdk.ApiKey"
+            android:value="3f8dceb476d4ab2ad2f96ed224984aad077110c68e8e4711939bba43" />
+
+
+        <receiver
+            android:name=".service.InstallReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".service.BackgourndScanService"
+            android:exported="false"></service>
 
         <activity
             android:name=".Activity.FileBigActivity"
@@ -56,11 +81,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activity.AboutActivity"
-            android:exported="false"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.JunkCleaner" />
-        <activity
             android:name=".Activity.PrivacyActivity"
             android:exported="false"
             android:screenOrientation="portrait"
@@ -73,7 +93,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="${applicationId}.provider"
+            android:authorities="com.mobcleaner.mcapp.provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -126,6 +146,20 @@
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.JunkCleaner" />
+        <activity
+            android:name=".Activity.AntivirusActivity"
+            android:configChanges="orientation"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.JunkCleaner">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <action android:name="android.intent.action.VIEW" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
     </application>
 
 </manifest>

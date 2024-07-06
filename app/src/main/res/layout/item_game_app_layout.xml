@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/widget_size_70"
+    android:layout_height="wrap_content"
     android:background="@color/black">
 
 
@@ -12,7 +12,7 @@
         android:layout_width="@dimen/widget_size_35"
         android:layout_height="@dimen/widget_size_35"
         android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/compressor" />
@@ -26,20 +26,72 @@
         android:text="App Name"
         android:textColor="@color/white"
         android:textSize="@dimen/font_size_12"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/appIcon"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/appIcon" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/launchBtn"
         android:layout_width="@dimen/widget_size_90"
         android:layout_height="@dimen/widget_size_30"
         android:layout_margin="8dp"
-        android:text="open"
-        android:textColor="@color/white"
-        android:textAllCaps="false"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/optimize_btn"
+        android:text="open"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/gameSize345"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Size:"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_14"
+        app:layout_constraintStart_toStartOf="@+id/appName"
+        app:layout_constraintTop_toBottomOf="@+id/appName" />
+
+    <TextView
+        android:id="@+id/gameSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="TextView"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/font_size_14"
+        app:layout_constraintBottom_toBottomOf="@+id/gameSize345"
+        app:layout_constraintStart_toEndOf="@+id/gameSize345"
+        app:layout_constraintTop_toTopOf="@+id/gameSize345" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Installed Date:"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gameSize345"
+        app:layout_constraintTop_toBottomOf="@+id/gameSize345" />
+
+    <TextView
+        android:id="@+id/gameInstalledDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="TextView"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/font_size_14"
+        app:layout_constraintBottom_toBottomOf="@+id/textView44"
+        app:layout_constraintStart_toEndOf="@+id/textView44"
+        app:layout_constraintTop_toTopOf="@+id/textView44" />
 </androidx.constraintlayout.widget.ConstraintLayout>

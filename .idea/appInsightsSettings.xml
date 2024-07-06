@@ -22,8 +22,8 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="com.mobcleaner.app" />
-                  <option name="mobileSdkAppId" value="1:761650740711:android:96293c4ac7d8b1d5acd142" />
+                  <option name="appId" value="com.mobcleaner.mcapp" />
+                  <option name="mobileSdkAppId" value="1:761650740711:android:731ad72c2dc21c1dacd142" />
                   <option name="projectId" value="news-application-807b2" />
                   <option name="projectNumber" value="761650740711" />
                 </ConnectionSetting>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/remove_btn">
+    android:background="@drawable/border_drawable">
 
     <View
         android:id="@+id/view10"
@@ -48,7 +48,7 @@
         android:layout_height="@dimen/widget_size_35"
         android:text="Cancel"
         android:textAllCaps="false"
-        android:textColor="@color/white"
+        android:textColor="#FFFFFFFF"
         android:background="@drawable/remove_btn"
         app:layout_constraintEnd_toStartOf="@+id/grantbtn"
         app:layout_constraintHorizontal_bias="0.5"
@@ -64,7 +64,7 @@
         android:background="@drawable/optimize_btn"
         android:text="Scan"
         android:textAllCaps="false"
-        android:textColor="@color/white"
+        android:textColor="#FFFFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

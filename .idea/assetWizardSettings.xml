@@ -307,7 +307,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$PROJECT_DIR$/../../../Anmol%20Daim/AppData/Local/Android/Sdk/icons/material/materialicons/arrow_back_ios/baseline_arrow_back_ios_24.xml" />
+                                      <entry key="url" value="file:/$PROJECT_DIR$/../../../Anmol%20Daim/AppData/Local/Android/Sdk/icons/material/materialicons/menu/baseline_menu_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -317,8 +317,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="f5f0f0" />
-                            <entry key="outputName" value="back_icon" />
+                            <entry key="color" value="050305" />
+                            <entry key="outputName" value="menu_icon_toolbar" />
                             <entry key="sourceFile" value="C:\Users\Anmol Daim\AndroidStudioProjects\junkcleaner" />
                           </map>
                         </option>

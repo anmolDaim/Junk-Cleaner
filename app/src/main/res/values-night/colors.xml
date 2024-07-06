@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#FF000000</color>
+    <color name="grey_bg">#2A2A2A</color>
+    <color name="grey_btn">#3C3C3C</color>
+    <color name="text_grey">#BAB7B7</color>
+    <color name="selected_dot_color">#009688</color>
+    <color name="unselected_dot_color">#FFFFFFFF</color>
+    <color name="orange">#FF5722</color>
+    <color name="blue">#2196F3</color>
+    <color name="green">#4CAF50</color>
+    <color name="batteryInfo">#BAEDBC</color>
+    <color name="yellow">#FFC107</color>
+    <color name="red">#F44336</color>
+    <color name="viewpagerbg">#2A2A2A</color>
 
+    <color name="colorPrimary">#00c292</color>
+    <color name="colorPrimaryDark">#00a57c</color>
+    <color name="colorPrimaryText">#009789</color>
 
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorDanger">#d14343</color>
+    <color name="colorRisk">#f2b843</color>
+    <color name="colorSafe">#009789</color>
+    <color name="colorGrayDark">#454545</color>
+    <color name="colorGrayMid">#757575</color>
+    <color name="colorGrayLight">#dddddd</color>
+    <color name="colorWhite">#FFFFFF</color>
 </resources>

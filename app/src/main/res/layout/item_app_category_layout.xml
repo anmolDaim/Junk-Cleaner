@@ -19,8 +19,8 @@
 
         <ImageView
             android:id="@+id/itemImage"
-            android:layout_width="@dimen/widget_size_35"
-            android:layout_height="@dimen/widget_size_35"
+            android:layout_width="@dimen/widget_size_40"
+            android:layout_height="@dimen/widget_size_40"
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

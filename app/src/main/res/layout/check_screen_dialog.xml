@@ -112,7 +112,7 @@
             <View
                 android:layout_width="@dimen/widget_size_45"
                 android:layout_height="@dimen/widget_size_45"
-                android:background="@color/white" />
+                android:background="#fff" />
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>

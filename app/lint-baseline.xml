@@ -14,7 +14,7 @@
 
     <issue
         id="Instantiatable"
-        message="This class should provide a default constructor (a public constructor with no arguments) (`com.mobcleaner.app.Receiver.MobileDataReceiver`)"
+        message="This class should provide a default constructor (a public constructor with no arguments) (`com.mobcleaner.mcapp.Receiver.MobileDataReceiver`)"
         errorLine1="            android:name=&quot;.Receiver.MobileDataReceiver&quot;"
         errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -25,7 +25,7 @@
 
     <issue
         id="Instantiatable"
-        message="This class should provide a default constructor (a public constructor with no arguments) (`com.mobcleaner.app.Receiver.WifiReceiver`)"
+        message="This class should provide a default constructor (a public constructor with no arguments) (`com.mobcleaner.mcapp.Receiver.WifiReceiver`)"
         errorLine1="            android:name=&quot;.Receiver.WifiReceiver&quot;"
         errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -36,7 +36,7 @@
 
     <issue
         id="Instantiatable"
-        message="This class should provide a default constructor (a public constructor with no arguments) (`com.mobcleaner.app.Receiver.BluetoothReceiver`)"
+        message="This class should provide a default constructor (a public constructor with no arguments) (`com.mobcleaner.mcapp.Receiver.BluetoothReceiver`)"
         errorLine1="            android:name=&quot;.Receiver.BluetoothReceiver&quot;"
         errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -47,7 +47,7 @@
 
     <issue
         id="Instantiatable"
-        message="This class should provide a default constructor (a public constructor with no arguments) (`com.mobcleaner.app.Receiver.RotationReceiver`)"
+        message="This class should provide a default constructor (a public constructor with no arguments) (`com.mobcleaner.mcapp.Receiver.RotationReceiver`)"
         errorLine1="            android:name=&quot;.Receiver.RotationReceiver&quot;"
         errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -58,7 +58,7 @@
 
     <issue
         id="Instantiatable"
-        message="This class should provide a default constructor (a public constructor with no arguments) (`com.mobcleaner.app.Receiver.SilentReceiver`)"
+        message="This class should provide a default constructor (a public constructor with no arguments) (`com.mobcleaner.mcapp.Receiver.SilentReceiver`)"
         errorLine1="            android:name=&quot;.Receiver.SilentReceiver&quot;"
         errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location

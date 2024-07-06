@@ -36,7 +36,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:fontFamily="@font/lato_bold"
-                        android:text="MOB Cleaner"
+                        android:text="MobCleaner"
                         android:textColor="@color/white"
                         android:textSize="@dimen/font_size_17"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -67,6 +67,15 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
+    <View
+        android:id="@+id/view11"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
@@ -74,7 +83,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+        app:layout_constraintTop_toBottomOf="@+id/view11">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -85,6 +94,8 @@
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:background="@drawable/pager_up_corner"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -96,7 +107,10 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:background="@drawable/pager_cirners"
+                android:backgroundTint="@color/viewpagerbg"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:paddingBottom="12dp"
@@ -108,11 +122,14 @@
                 android:id="@+id/batteryCategoryRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/viewPagerIndicator" />
+
 
             <TextView
                 android:id="@+id/textView14"
@@ -123,8 +140,9 @@
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/pager_up_corner"
                 android:padding="10dp"
-                android:text="BATTERY MANAGEMENT"
-                android:textColor="@color/text_grey"
+                android:fontFamily="@font/lato_bold"
+                android:text="SYSTEM MANAGEMENT"
+                android:textColor="@color/white"
                 android:textSize="@dimen/font_size_14"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -161,7 +179,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:backgroundTint="@color/grey_bg"
+                android:backgroundTint="@color/viewpagerbg"
                 app:cardCornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
@@ -180,8 +198,8 @@
                         android:layout_marginBottom="16dp"
                         android:background="@drawable/optimize_btn"
                         android:text="Device Status"
+                        android:textColor="#fff"
                         android:textSize="12dp"
-                        android:textColor="@color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="@+id/osVersion"
                         app:layout_constraintTop_toBottomOf="@+id/osVersion" />
@@ -342,8 +360,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:background="@drawable/battery_gradient_red">
+                    android:background="@drawable/battery_gradient_red"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/textView64"

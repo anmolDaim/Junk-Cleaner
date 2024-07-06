@@ -48,7 +48,7 @@
                     android:layout_marginStart="16dp"
                     android:fontFamily="@font/lato_bold"
                     android:text="Screen Check"
-                    android:textColor="@color/white"
+                    android:textColor="#fff"
                     android:textSize="@dimen/font_size_17"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/backBtn"
@@ -92,7 +92,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:textColor="@color/white"
+            android:textColor="#fff"
             />
     </androidx.cardview.widget.CardView>
 

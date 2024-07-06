@@ -21,11 +21,14 @@
 #-renamesourcefileattribute SourceFile
 
 
--keep class com.mobcleaner.app.Activity.*{ *; }
--keep class com.mobcleaner.app.Fragment.* { *; }
--keep class com.mobcleaner.app.Adapter.* { *; }
--keep class com.mobcleaner.app.DataClass.* { *; }
--keep class com.mobcleaner.app.transition.* { *; }
+-keep class com.mobcleaner.mcapp.Activity.*{ *; }
+-keep class com.mobcleaner.mcapp.Fragment.* { *; }
+-keep class com.mobcleaner.mcapp.Adapter.* { *; }
+-keep class com.mobcleaner.mcapp.DataClass.* { *; }
+-keep class com.mobcleaner.mcapp.transition.* { *; }
+-keep class com.mobcleaner.mcapp.entity.* { *; }
+-keep class com.mobcleaner.mcapp.service.* { *; }
+-keep class com.mobcleaner.mcapp.util.* { *; }
 
 #PhilJay:MPAndroidChart
 -keep class com.github.mikephil.charting.** { *; }
@@ -38,6 +41,11 @@
 
 -keep class com.google.ads.mediation.AdUrlAdapter {
     *;
+}
+
+#Antivirus SDK
+-keep class com.trustlook.** {
+*;
 }
 
 

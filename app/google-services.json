@@ -46,6 +46,25 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:761650740711:android:731ad72c2dc21c1dacd142",
+        "android_client_info": {
+          "package_name": "com.mobcleaner.mcapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2ruieaupRtBZYoT_X7ZbvaMEycEqYWxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:761650740711:android:a0af3da0dcfd9f94acd142",
         "android_client_info": {
           "package_name": "com.mobnews.app"

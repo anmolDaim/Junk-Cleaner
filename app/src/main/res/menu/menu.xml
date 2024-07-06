@@ -8,7 +8,7 @@
     <item
         android:id="@+id/navigation_tools"
         app:showAsAction="ifRoom"
-        android:icon="@drawable/tools_nav_icon"/>
+        android:icon="@drawable/tool_box"/>
     <item
         android:id="@+id/navigation_profile"
         app:showAsAction="ifRoom"
